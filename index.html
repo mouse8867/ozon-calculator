@@ -1,9 +1,11 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
-    <!-- 修改：更新 Content-Security-Policy 以允许 freecurrencyapi.com 的连接 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 关键修改：Content-Security-Policy 更新，明确允许连接 freecurrencyapi.com -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org; connect-src 'self' https://api.freecurrencyapi.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OZON选品计算器----开放版 v2.5.1</title> <!-- 版本号已更新 -->
+    <title>OZON选品计算器----开放版 v2.5.2</title> <!-- 版本号已更新 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -120,7 +122,7 @@
         <div class="title-container bg-gradient-to-r from-primary to-secondary text-white p-4 md:col-span-2">
             <div class="flex justify-between items-center">
                 <h1 class="text-xl md:text-2xl font-bold"><i class="fa fa-calculator mr-2"></i>OZON选品计算器----开放版</h1>
-                <div class="version cursor-pointer hover:underline" title="点击查看更新日志">v2.5.1</div> <!-- 版本号已更新 -->
+                <div class="version cursor-pointer hover:underline" title="点击查看更新日志">v2.5.2</div> <!-- 版本号已更新 -->
             </div>
         </div>
         
@@ -431,6 +433,11 @@
         <div class="changelog-content bg-white p-5 rounded-lg w-11/12 max-w-2xl max-h-[80vh] overflow-y-auto shadow-xl transform transition-all">
             <div class="changelog-title text-xl font-bold text-secondary mb-4 text-center">更新日志</div>
             <div class="changelog-list">
+                <div class="changelog-version text-lg font-bold text-primary mb-1">v2.5.2</div> <!-- 新增日志 -->
+                <div class="changelog-date text-sm text-gray-500 mb-2">2025-07-01</div>
+                <div class="changelog-items mb-4 pl-4">
+                    <div class="changelog-item text-gray-700 mb-1">修复 Content Security Policy (CSP) 错误，允许连接 Free Currency API。</div>
+                </div>
                 <div class="changelog-version text-lg font-bold text-primary mb-1">v2.5.1</div> <!-- 新增日志 -->
                 <div class="changelog-date text-sm text-gray-500 mb-2">2025-07-01</div>
                 <div class="changelog-items mb-4 pl-4">
@@ -894,6 +901,5 @@
             });
         });
     </script>
-
-
-</body></html>
+</body>
+</html>
